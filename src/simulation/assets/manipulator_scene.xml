@@ -1,0 +1,228 @@
+<mujoco model="manipulator2_simulation_scene">
+  <compiler angle="radian" balanceinertia="true" discardvisual="true" fusestatic="false" autolimits="true" meshdir="../../../urdf_model/root/meshes"/>
+
+  <default>
+    <geom friction="1.2 0.005 0.0001" solref="0.004 1" solimp="0.9 0.95 0.001"/>
+    <joint damping="0.5" armature="0.01"/>
+  </default>
+
+  <visual>
+    <headlight ambient="0.4 0.4 0.4" diffuse="0.8 0.8 0.8" specular="0.1 0.1 0.1"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global offwidth="640" offheight="480"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512"/>
+    <texture name="plane" type="2d" builtin="checker" rgb1="0.9 0.9 0.9" rgb2="0.8 0.8 0.8" width="512" height="512" mark="cross" markrgb="0.6 0.6 0.6"/>
+    <material name="plane_mat" reflectance="0.1" texture="plane" texrepeat="5 5" texuniform="true"/>
+    <material name="table_mat" reflectance="0.2" rgba="0.75 0.75 0.75 1.0"/>
+    <material name="finger_mat" reflectance="0.3" rgba="0.2 0.3 0.8 1.0"/>
+
+    <!-- Manipulator collision meshes -->
+    <mesh name="_1_________1__1__Body1_collision" file="_1_________1__1__Body1_collision.stl"/>
+    <mesh name="_2________1__1__Body1_collision" file="_2________1__1__Body1_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body21_collision" file="Gripper_x_t__1__1__Body21_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body3_collision" file="Gripper_x_t__1__1__Body3_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body26_collision" file="Gripper_x_t__1__1__Body26_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body17_collision" file="Gripper_x_t__1__1__Body17_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body4_collision" file="Gripper_x_t__1__1__Body4_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body9_collision" file="Gripper_x_t__1__1__Body9_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body22_collision" file="Gripper_x_t__1__1__Body22_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body13_collision" file="Gripper_x_t__1__1__Body13_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body23_collision" file="Gripper_x_t__1__1__Body23_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body7_collision" file="Gripper_x_t__1__1__Body7_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body12_collision" file="Gripper_x_t__1__1__Body12_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body24_collision" file="Gripper_x_t__1__1__Body24_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body2_collision" file="Gripper_x_t__1__1__Body2_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body19_collision" file="Gripper_x_t__1__1__Body19_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body25_collision" file="Gripper_x_t__1__1__Body25_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body14_collision" file="Gripper_x_t__1__1__Body14_collision.stl"/>
+    <mesh name="Component34_1__Body1_collision" file="Component34_1__Body1_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body16_collision" file="Gripper_x_t__1__1__Body16_collision.stl"/>
+    <mesh name="Component35_1__Body1_collision" file="Component35_1__Body1_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body20_collision" file="Gripper_x_t__1__1__Body20_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body10_collision" file="Gripper_x_t__1__1__Body10_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body15_collision" file="Gripper_x_t__1__1__Body15_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body18_collision" file="Gripper_x_t__1__1__Body18_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body11_collision" file="Gripper_x_t__1__1__Body11_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body6_collision" file="Gripper_x_t__1__1__Body6_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body8_collision" file="Gripper_x_t__1__1__Body8_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body5_collision" file="Gripper_x_t__1__1__Body5_collision.stl"/>
+    <mesh name="Gripper_x_t__1__1__Body1_collision" file="Gripper_x_t__1__1__Body1_collision.stl"/>
+    <mesh name="Nema17__1___1___1__1__Body1_collision" file="Nema17__1___1___1__1__Body1_collision.stl"/>
+    <mesh name="_______________1___1___1__1__Body1_collision" file="_______________1___1___1__1__Body1_collision.stl"/>
+    <mesh name="___________1___1___1__1__Body2_collision" file="___________1___1___1__1__Body2_collision.stl"/>
+    <mesh name="______________1___1___1__1__Body5_collision" file="______________1___1___1__1__Body5_collision.stl"/>
+    <mesh name="______________1___1___1__1__Body4_collision" file="______________1___1___1__1__Body4_collision.stl"/>
+    <mesh name="______________1___1___1__1__Body7_collision" file="______________1___1___1__1__Body7_collision.stl"/>
+    <mesh name="______________1___1___1__1__Body8_collision" file="______________1___1___1__1__Body8_collision.stl"/>
+    <mesh name="______________1___1___1__1__Body6_collision" file="______________1___1___1__1__Body6_collision.stl"/>
+    <mesh name="______________1___1___1__1__Body2_collision" file="______________1___1___1__1__Body2_collision.stl"/>
+    <mesh name="______________1___1___1__1__Body3_collision" file="______________1___1___1__1__Body3_collision.stl"/>
+    <mesh name="________________1___1___1__1__Body1_collision" file="________________1___1___1__1__Body1_collision.stl"/>
+    <mesh name="___________1___1___1__1__Body1_collision" file="___________1___1___1__1__Body1_collision.stl"/>
+    <mesh name="______________1___1___1__1__Body1_collision" file="______________1___1___1__1__Body1_collision.stl"/>
+    <mesh name="_____________________1__1__Body1_collision" file="_____________________1__1__Body1_collision.stl"/>
+  </asset>
+
+  <worldbody>
+    <light directional="true" pos="0.3 0.2 1.5" dir="-0.2 -0.1 -1" diffuse="0.8 0.8 0.8" specular="0.2 0.2 0.2"/>
+    <light directional="false" pos="0.0 0.0 1.0" diffuse="0.5 0.5 0.5"/>
+
+    <!-- Floor -->
+    <geom name="floor" type="plane" pos="0 0 -0.5" size="2 2 0.1" material="plane_mat"/>
+
+    <!-- Calibration Workspace Table: top surface is exactly Z = 0.0 -->
+    <geom name="table_surface" type="box" pos="0.35 0.0 -0.01" size="0.45 0.35 0.01" material="table_mat" friction="1.0 0.005 0.0001"/>
+
+    <!-- Stand / Robot Base mounted at origin -->
+    <geom pos="0.089 0 0" quat="1 0 0 0" type="mesh" rgba="0.627451 0.627451 0.643137 1" mesh="Nema17__1___1___1__1__Body1_collision"/>
+    <geom pos="0.089 0 0" quat="1 0 0 0" type="mesh" rgba="0.627451 0.627451 0.643137 1" mesh="_______________1___1___1__1__Body1_collision"/>
+    <geom pos="0.089 0 0" quat="1 0 0 0" type="mesh" rgba="0.627451 0.627451 0.643137 1" mesh="___________1___1___1__1__Body2_collision"/>
+    <geom pos="0.0890121 -4.66195e-07 7.23668e-05" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="______________1___1___1__1__Body5_collision"/>
+    <geom pos="0.0890121 -4.66195e-07 7.23668e-05" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="______________1___1___1__1__Body4_collision"/>
+    <geom pos="0.0890121 -4.66195e-07 7.23668e-05" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="______________1___1___1__1__Body7_collision"/>
+    <geom pos="0.0890121 -4.66195e-07 7.23668e-05" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="______________1___1___1__1__Body8_collision"/>
+    <geom pos="0.0890121 -4.66195e-07 7.23668e-05" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="______________1___1___1__1__Body6_collision"/>
+    <geom pos="0.0890121 -4.66195e-07 7.23668e-05" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="______________1___1___1__1__Body2_collision"/>
+    <geom pos="0.0890121 -4.66195e-07 7.23668e-05" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="______________1___1___1__1__Body3_collision"/>
+    <geom pos="0.089 0 0" quat="1 0 0 0" type="mesh" rgba="0.627451 0.627451 0.643137 1" mesh="___________1___1___1__1__Body1_collision"/>
+    <geom pos="0.0890121 -4.66195e-07 7.23668e-05" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="______________1___1___1__1__Body1_collision"/>
+
+    <!-- Joint 1 body (Waist rotation) -->
+    <body name="верхняя_крышка__1___1___1__1__body1" pos="0.0890121 -4.66195e-07 0.0140724" quat="0.707105 0.707108 0 0">
+      <inertial pos="2.03323e-05 0.0164555 -4.04253e-06" quat="0.706285 5.44818e-05 -5.79991e-05 0.707927" mass="0.0170396" diaginertia="2.80182e-05 2.40801e-05 1.65991e-05"/>
+      <joint name="revolute_1" axis="0 -1 0" range="-3.14159 3.14159"/>
+      <geom pos="0 0.0189185 -0.0599185" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="________________1___1___1__1__Body1_collision"/>
+
+      <!-- Joint 2 body (Shoulder pitch) -->
+      <body name="1_сустав__1__1__body1" pos="0.000223271 0.0474832 -0.0193178" quat="0.707105 -0.707108 0 0">
+        <inertial pos="-0.000199324 -0.0193355 0.0556115" quat="0.999888 0.000331862 0.000359909 0.0149676" mass="0.0219182" diaginertia="5.10503e-05 4.95357e-05 1.55715e-05"/>
+        <joint name="revolute_2" range="0 3.14159" axis="0 1 0"/>
+        <geom pos="-0.000223271 -0.0193178 -0.0614832" quat="1 0 0 0" type="mesh" rgba="0.8 0.8 0.8 1" mesh="_1_________1__1__Body1_collision"/>
+
+        <!-- Joint 3 body (Elbow / FOREARM link) -->
+        <body name="2сустав__1__1__body1" pos="0 0 0.114">
+          <inertial pos="-0.000199324 -0.0193355 0.0556115" quat="0.999888 0.000331862 0.000359909 0.0149676" mass="0.0219182" diaginertia="5.10503e-05 4.95357e-05 1.55715e-05"/>
+          <joint name="revolute_3" range="0 3.14159" axis="0 1 0"/>
+          <geom pos="-0.000223271 -0.0193178 -0.175483" quat="1 0 0 0" type="mesh" rgba="0.8 0.8 0.8 1" mesh="_2________1__1__Body1_collision"/>
+
+          <!-- SENSORS ON FOREARM: OV5647 Camera & VL53L0X ToF -->
+          <camera name="forearm_camera" pos="0.0 0.03 0.08" euler="0.0 0.35 0.0" fovy="48.8"/>
+          <site name="tof_sensor_site" pos="0.0 0.03 0.06" euler="0.0 0.35 0.0" size="0.005" rgba="1 0 0 1"/>
+
+          <!-- Joint 4 body (Wrist pitch) -->
+          <body name="соеденитель_захвата__1__1__body1" pos="0 0 0.114">
+            <inertial pos="-0.000183861 -0.0193222 0.0154104" quat="0.507234 0.492661 0.492759 0.507136" mass="0.0107793" diaginertia="9.74338e-06 5.75509e-06 5.12213e-06"/>
+            <joint name="revolute_4" range="0 3.14159" axis="0 1 0"/>
+            <geom pos="-0.000223271 -0.0193178 -0.289483" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="_____________________1__1__Body1_collision"/>
+
+            <!-- Joint 5 body (Claw / Wrist roll & Gripper Base) -->
+            <body name="gripper_x_t__1__1__body21" pos="0.00542673 -0.0193187 0.0638668">
+              <inertial pos="0 0 0.00155546" quat="0.501511 0.498484 -0.501511 0.498484" mass="0.02" diaginertia="5e-6 5e-6 5e-6"/>
+              <joint name="revolute_5" axis="0 0 1" range="-3.14159 3.14159"/>
+
+              <!-- Visual/collision meshes of the fixed claw frame -->
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="1 1 1 1" mesh="Gripper_x_t__1__1__Body21_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body3_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0 0 1 1" mesh="Gripper_x_t__1__1__Body26_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0 0 1 1" mesh="Gripper_x_t__1__1__Body17_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body4_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body9_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" type="mesh" rgba="1 1 1 1" mesh="Gripper_x_t__1__1__Body22_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body13_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" type="mesh" rgba="1 0.501961 0.501961 1" mesh="Gripper_x_t__1__1__Body23_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body7_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body12_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0 0 1 1" mesh="Gripper_x_t__1__1__Body24_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.647059 0.647059 0.647059 1" mesh="Gripper_x_t__1__1__Body2_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" type="mesh" rgba="0.647059 0.619608 0.588235 1" mesh="Gripper_x_t__1__1__Body19_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0 0 1 1" mesh="Gripper_x_t__1__1__Body25_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body14_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.647059 0.619608 0.588235 1" mesh="Component34_1__Body1_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body16_collision"/>
+              <geom pos="-0.00765 1.31805e-05 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.690196 0.658824 0.639216 1" mesh="Component35_1__Body1_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.690196 0.611765 0.529412 1" mesh="Gripper_x_t__1__1__Body20_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body10_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body15_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.898039 0.898039 0.898039 1" mesh="Gripper_x_t__1__1__Body18_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body11_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body6_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" quat="1 0 0 0" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body8_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body5_collision"/>
+              <geom pos="-0.00565 9.07958e-07 -0.35335" type="mesh" rgba="0.776471 0.756863 0.737255 1" mesh="Gripper_x_t__1__1__Body1_collision"/>
+
+              <!-- End-Effector / Grasp center reference site -->
+              <site name="gripper_tcp" pos="0.0 0.0 0.08" size="0.005" rgba="1 1 0 1"/>
+
+              <!-- MOVING FINGERS FOR PHYSICAL CONTACT GRASPING -->
+              <body name="left_finger" pos="0.0 0.015 0.07">
+                <joint name="gripper_left_joint" type="slide" axis="0 1 0" range="-0.015 0.005" damping="2.0"/>
+                <geom name="left_finger_geom" type="box" size="0.006 0.004 0.018" material="finger_mat" friction="2.5 0.05 0.001" solref="0.002 1" solimp="0.95 0.99 0.001"/>
+              </body>
+
+              <body name="right_finger" pos="0.0 -0.015 0.07">
+                <joint name="gripper_right_joint" type="slide" axis="0 1 0" range="-0.005 0.015" damping="2.0"/>
+                <geom name="right_finger_geom" type="box" size="0.006 0.004 0.018" material="finger_mat" friction="2.5 0.05 0.001" solref="0.002 1" solimp="0.95 0.99 0.001"/>
+              </body>
+
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+
+    <!-- TARGET MANIPULABLE OBJECTS ON THE TABLE -->
+    <!-- Red Cube -->
+    <body name="red_box" pos="0.28 0.05 0.02">
+      <freejoint name="joint_red_box"/>
+      <geom name="geom_red_box" type="box" size="0.018 0.018 0.018" mass="0.05" rgba="0.9 0.15 0.15 1.0" friction="1.5 0.01 0.001"/>
+    </body>
+
+    <!-- Blue Cylinder -->
+    <body name="blue_cylinder" pos="0.32 0.16 0.025">
+      <freejoint name="joint_blue_cylinder"/>
+      <geom name="geom_blue_cylinder" type="cylinder" size="0.016 0.025" mass="0.06" rgba="0.15 0.35 0.9 1.0" friction="1.5 0.01 0.001"/>
+    </body>
+
+    <!-- Green Sphere / Ball -->
+    <body name="green_sphere" pos="0.30 -0.12 0.02">
+      <freejoint name="joint_green_sphere"/>
+      <geom name="geom_green_sphere" type="sphere" size="0.018" mass="0.04" rgba="0.15 0.85 0.25 1.0" friction="1.5 0.01 0.001"/>
+    </body>
+
+    <!-- Pointing Gesture Visual Markers in Scene -->
+    <site name="gesture_origin_site" pos="0.55 0.35 0.35" size="0.012" rgba="1.0 0.8 0.0 0.8"/>
+    <site name="gesture_target_site" pos="0.28 0.05 0.001" size="0.018" rgba="1.0 0.1 0.1 0.8"/>
+  </worldbody>
+  <contact>
+    <exclude body1="world" body2="верхняя_крышка__1___1___1__1__body1"/>
+    <exclude body1="верхняя_крышка__1___1___1__1__body1" body2="1_сустав__1__1__body1"/>
+    <exclude body1="1_сустав__1__1__body1" body2="2сустав__1__1__body1"/>
+    <exclude body1="2сустав__1__1__body1" body2="соеденитель_захвата__1__1__body1"/>
+    <exclude body1="соеденитель_захвата__1__1__body1" body2="gripper_x_t__1__1__body21"/>
+    <exclude body1="gripper_x_t__1__1__body21" body2="left_finger"/>
+    <exclude body1="gripper_x_t__1__1__body21" body2="right_finger"/>
+  </contact>
+
+
+  <equality>
+    <!-- Symmetric finger movement -->
+    <joint joint1="gripper_left_joint" joint2="gripper_right_joint" polycoef="0 -1 0 0 0"/>
+
+    <!-- Software-triggered weld constraints for 100% reliable transport after grasping -->
+    <weld name="weld_red_box" body1="gripper_x_t__1__1__body21" body2="red_box" active="false"/>
+    <weld name="weld_blue_cylinder" body1="gripper_x_t__1__1__body21" body2="blue_cylinder" active="false"/>
+    <weld name="weld_green_sphere" body1="gripper_x_t__1__1__body21" body2="green_sphere" active="false"/>
+  </equality>
+
+  <actuator>
+    <position name="actuator_revolute_1" joint="revolute_1" kp="60" kv="6" ctrlrange="-3.14159 3.14159"/>
+    <position name="actuator_revolute_2" joint="revolute_2" kp="100" kv="10" ctrlrange="0.0 3.14159"/>
+    <position name="actuator_revolute_3" joint="revolute_3" kp="100" kv="10" ctrlrange="0.0 3.14159"/>
+    <position name="actuator_revolute_4" joint="revolute_4" kp="60" kv="6" ctrlrange="0.0 3.14159"/>
+    <position name="actuator_revolute_5" joint="revolute_5" kp="40" kv="4" ctrlrange="-3.14159 3.14159"/>
+    <position name="actuator_gripper" joint="gripper_left_joint" kp="150" kv="10" ctrlrange="-0.015 0.005"/>
+  </actuator>
+</mujoco>

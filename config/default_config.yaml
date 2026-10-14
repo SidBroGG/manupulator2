@@ -30,17 +30,17 @@ robot:
       type: "revolute"
       lower_limit: 0.0
       upper_limit: 3.14159
-      home_pos: 1.5708
+      home_pos: 0.35
     - name: "revolute_3"
       type: "revolute"
       lower_limit: 0.0
       upper_limit: 3.14159
-      home_pos: 1.5708
+      home_pos: 0.35
     - name: "revolute_4"
       type: "revolute"
       lower_limit: 0.0
       upper_limit: 3.14159
-      home_pos: 1.5708
+      home_pos: 0.50
     - name: "revolute_5"
       type: "revolute"
       lower_limit: -3.14159

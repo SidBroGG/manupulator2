@@ -69,7 +69,7 @@
 -->
 <robot name="root">
     <mujoco>
-        <compiler angle="radian" balanceinertia="true" discardvisual="false" fusestatic="true" autolimits="true" />
+        <compiler angle="radian" balanceinertia="true" discardvisual="true" fusestatic="true" autolimits="true"  />
     </mujoco>
     <link name="1_сустав__1__1__body1">
         <inertial>
@@ -80,7 +80,7 @@
         <visual>
             <origin xyz="-0.000223271 -0.0193178 -0.0614832" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/_1_________1__1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/_1_________1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="1.000000_1.000000_1.000000_0.000000_0.000000">
                 <color rgba="1 1 1 1" />
@@ -89,7 +89,7 @@
         <collision>
             <origin xyz="-0.000223271 -0.0193178 -0.0614832" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/_1_________1__1__Body1_collision.stl" />
+                <mesh filename="root/meshes/_1_________1__1__Body1_collision.stl" />
             </geometry>
         </collision>
     </link>
@@ -102,7 +102,7 @@
         <visual>
             <origin xyz="-0.000223271 -0.0193178 -0.175483" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/_2________1__1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/_2________1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="1.000000_1.000000_1.000000_0.000000_0.000000">
                 <color rgba="1 1 1 1" />
@@ -111,7 +111,7 @@
         <collision>
             <origin xyz="-0.000223271 -0.0193178 -0.175483" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/_2________1__1__Body1_collision.stl" />
+                <mesh filename="root/meshes/_2________1__1__Body1_collision.stl" />
             </geometry>
         </collision>
     </link>
@@ -124,7 +124,7 @@
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body21.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body21.stl" scale="1 1 1" />
             </geometry>
             <material name="1.000000_1.000000_1.000000_0.000000_0.000000">
                 <color rgba="1 1 1 1" />
@@ -133,13 +133,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body21_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body21_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body3.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body3.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -148,13 +148,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body3_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body3_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body26.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body26.stl" scale="1 1 1" />
             </geometry>
             <material name="0.000000_0.000000_1.000000_0.000000_0.000000">
                 <color rgba="0 0 1 1" />
@@ -163,13 +163,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body26_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body26_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body17.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body17.stl" scale="1 1 1" />
             </geometry>
             <material name="0.000000_0.000000_1.000000_0.000000_0.000000">
                 <color rgba="0 0 1 1" />
@@ -178,13 +178,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body17_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body17_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body4.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body4.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -193,13 +193,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body4_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body4_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body9.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body9.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -208,13 +208,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body9_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body9_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body22.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body22.stl" scale="1 1 1" />
             </geometry>
             <material name="1.000000_1.000000_1.000000_0.000000_0.000000">
                 <color rgba="1 1 1 1" />
@@ -223,13 +223,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body22_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body22_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body13.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body13.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -238,13 +238,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body13_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body13_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body23.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body23.stl" scale="1 1 1" />
             </geometry>
             <material name="1.000000_0.501961_0.501961_0.000000_0.000000">
                 <color rgba="1 0.501961 0.501961 1" />
@@ -253,13 +253,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body23_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body23_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body7.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body7.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -268,13 +268,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body7_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body7_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body12.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body12.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -283,13 +283,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body12_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body12_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body24.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body24.stl" scale="1 1 1" />
             </geometry>
             <material name="0.000000_0.000000_1.000000_0.000000_0.000000">
                 <color rgba="0 0 1 1" />
@@ -298,13 +298,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body24_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body24_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body2.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -313,13 +313,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body2_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body2_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body19.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body19.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.619608_0.588235_0.000000_0.000000">
                 <color rgba="0.647059 0.619608 0.588235 1" />
@@ -328,13 +328,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body19_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body19_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body25.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body25.stl" scale="1 1 1" />
             </geometry>
             <material name="0.000000_0.000000_1.000000_0.000000_0.000000">
                 <color rgba="0 0 1 1" />
@@ -343,13 +343,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body25_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body25_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body14.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body14.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -358,13 +358,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body14_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body14_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Component34_1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Component34_1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.619608_0.588235_0.000000_0.000000">
                 <color rgba="0.647059 0.619608 0.588235 1" />
@@ -373,13 +373,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Component34_1__Body1_collision.stl" />
+                <mesh filename="root/meshes/Component34_1__Body1_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body16.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body16.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -388,13 +388,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body16_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body16_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00765 1.31805e-05 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Component35_1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Component35_1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.690196_0.658824_0.639216_0.000000_0.000000">
                 <color rgba="0.690196 0.658824 0.639216 1" />
@@ -403,13 +403,13 @@
         <collision>
             <origin xyz="-0.00765 1.31805e-05 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Component35_1__Body1_collision.stl" />
+                <mesh filename="root/meshes/Component35_1__Body1_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body20.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body20.stl" scale="1 1 1" />
             </geometry>
             <material name="0.690196_0.611765_0.529412_0.000000_0.000000">
                 <color rgba="0.690196 0.611765 0.529412 1" />
@@ -418,13 +418,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body20_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body20_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body10.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body10.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -433,13 +433,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body10_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body10_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body15.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body15.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -448,13 +448,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body15_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body15_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body18.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body18.stl" scale="1 1 1" />
             </geometry>
             <material name="0.898039_0.898039_0.898039_0.000000_0.000000">
                 <color rgba="0.898039 0.898039 0.898039 1" />
@@ -463,13 +463,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body18_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body18_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body11.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body11.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -478,13 +478,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body11_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body11_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body6.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body6.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -493,13 +493,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body6_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body6_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body8.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body8.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -508,13 +508,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body8_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body8_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body5.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body5.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -523,13 +523,13 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body5_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body5_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.776471_0.756863_0.737255_0.000000_0.000000">
                 <color rgba="0.776471 0.756863 0.737255 1" />
@@ -538,7 +538,7 @@
         <collision>
             <origin xyz="-0.00565 9.07958e-07 -0.35335" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Gripper_x_t__1__1__Body1_collision.stl" />
+                <mesh filename="root/meshes/Gripper_x_t__1__1__Body1_collision.stl" />
             </geometry>
         </collision>
     </link>
@@ -551,7 +551,7 @@
         <visual>
             <origin xyz="0.089 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Nema17__1___1___1__1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/Nema17__1___1___1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.627451_0.627451_0.643137_0.000000_0.000000">
                 <color rgba="0.627451 0.627451 0.643137 1" />
@@ -560,29 +560,13 @@
         <collision>
             <origin xyz="0.089 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/Nema17__1___1___1__1__Body1_collision.stl" />
+                <mesh filename="root/meshes/Nema17__1___1___1__1__Body1_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="0.089 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/_______________1___1___1__1__Body1.stl" scale="1 1 1" />
-            </geometry>
-            <material name="0.627451_0.627451_0.643137_0.000000_0.000000">
-                <texture />
-                <color rgba="0.627451 0.627451 0.643137 1" />
-            </material>
-        </visual>
-        <collision>
-            <origin xyz="0.089 0 0" rpy="0 -0 0" />
-            <geometry>
-                <mesh filename="package://root/meshes/_______________1___1___1__1__Body1_collision.stl" />
-            </geometry>
-        </collision>
-        <visual>
-            <origin xyz="0.089 0 0" rpy="0 -0 0" />
-            <geometry>
-                <mesh filename="package://root/meshes/___________1___1___1__1__Body2.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/_______________1___1___1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.627451_0.627451_0.643137_0.000000_0.000000">
                 <texture />
@@ -592,13 +576,29 @@
         <collision>
             <origin xyz="0.089 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/___________1___1___1__1__Body2_collision.stl" />
+                <mesh filename="root/meshes/_______________1___1___1__1__Body1_collision.stl" />
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0.089 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="root/meshes/___________1___1___1__1__Body2.stl" scale="1 1 1" />
+            </geometry>
+            <material name="0.627451_0.627451_0.643137_0.000000_0.000000">
+                <texture />
+                <color rgba="0.627451 0.627451 0.643137 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.089 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="root/meshes/___________1___1___1__1__Body2_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body5.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body5.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <texture />
@@ -608,13 +608,13 @@
         <collision>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body5_collision.stl" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body5_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body4.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body4.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <texture />
@@ -624,13 +624,13 @@
         <collision>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body4_collision.stl" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body4_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body7.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body7.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <texture />
@@ -640,13 +640,13 @@
         <collision>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body7_collision.stl" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body7_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body8.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body8.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <texture />
@@ -656,13 +656,13 @@
         <collision>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body8_collision.stl" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body8_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body6.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body6.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <texture />
@@ -672,13 +672,13 @@
         <collision>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body6_collision.stl" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body6_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body2.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body2.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <texture />
@@ -688,13 +688,13 @@
         <collision>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body2_collision.stl" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body2_collision.stl" />
             </geometry>
         </collision>
         <visual>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body3.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body3.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <texture />
@@ -704,7 +704,7 @@
         <collision>
             <origin xyz="0.0890121 -4.66195e-07 7.23668e-05" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body3_collision.stl" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body3_collision.stl" />
             </geometry>
         </collision>
     </link>
@@ -717,7 +717,7 @@
         <visual>
             <origin xyz="7.5287e-18 0.0189185 -0.0599185" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/________________1___1___1__1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/________________1___1___1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -726,7 +726,7 @@
         <collision>
             <origin xyz="7.5287e-18 0.0189185 -0.0599185" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/________________1___1___1__1__Body1_collision.stl" />
+                <mesh filename="root/meshes/________________1___1___1__1__Body1_collision.stl" />
             </geometry>
         </collision>
     </link>
@@ -739,7 +739,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/___________1___1___1__1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/___________1___1___1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.627451_0.627451_0.643137_0.000000_0.000000">
                 <color rgba="0.627451 0.627451 0.643137 1" />
@@ -748,7 +748,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/___________1___1___1__1__Body1_collision.stl" />
+                <mesh filename="root/meshes/___________1___1___1__1__Body1_collision.stl" />
             </geometry>
         </collision>
     </link>
@@ -761,7 +761,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -770,7 +770,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/______________1___1___1__1__Body1_collision.stl" />
+                <mesh filename="root/meshes/______________1___1___1__1__Body1_collision.stl" />
             </geometry>
         </collision>
     </link>
@@ -783,7 +783,7 @@
         <visual>
             <origin xyz="-0.000223271 -0.0193178 -0.289483" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/_____________________1__1__Body1.stl" scale="1 1 1" />
+                <mesh filename="root/meshes/_____________________1__1__Body1.stl" scale="1 1 1" />
             </geometry>
             <material name="0.647059_0.647059_0.647059_0.000000_0.000000">
                 <color rgba="0.647059 0.647059 0.647059 1" />
@@ -792,7 +792,7 @@
         <collision>
             <origin xyz="-0.000223271 -0.0193178 -0.289483" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://root/meshes/_____________________1__1__Body1_collision.stl" />
+                <mesh filename="root/meshes/_____________________1__1__Body1_collision.stl" />
             </geometry>
         </collision>
     </link>
