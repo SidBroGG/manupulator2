@@ -1,0 +1,27 @@
+# Core Math & Scientific Computing
+numpy>=2.0.0
+scipy>=1.15.0
+sympy>=1.13.0
+
+# Kinematics & Robotics Simulation
+ikpy>=4.1.0
+mujoco>=3.15.0
+
+# Computer Vision & Machine Learning
+opencv-python>=5.0.0.0
+opencv-contrib-python>=5.0.0.0
+mediapipe>=1.0.0
+ultralytics>=8.4.0
+torch>=2.14.0
+torchvision>=0.29.0
+
+# Distributed Communication (Laptop <-> Raspberry Pi)
+eclipse-zenoh>=1.10.0
+
+# Configuration & Utilities
+pydantic>=2.14.0
+pyyaml>=6.0.0
+pillow>=12.0.0
+
+# Testing
+pytest>=9.0.0

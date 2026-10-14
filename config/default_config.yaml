@@ -1,0 +1,93 @@
+# Manipulator2 System Configuration
+
+system:
+  mode: "simulation" # "simulation" | "real"
+  log_level: "INFO"
+
+comms:
+  zenoh:
+    mode: "peer" # "peer" | "client"
+    connect_endpoints: []
+    listen_endpoints: ["tcp/0.0.0.0:7447"]
+    topics:
+      camera_frame: "manipulator/sensors/camera/raw"
+      tof_distance: "manipulator/sensors/tof/distance"
+      joint_states: "manipulator/arm/joint_states"
+      joint_commands: "manipulator/arm/joint_commands"
+      gripper_command: "manipulator/gripper/command"
+      system_state: "manipulator/status/state"
+
+robot:
+  urdf_path: "urdf_model/root_mujoco.urdf"
+  num_dof: 6
+  joints:
+    - name: "revolute_1"
+      type: "revolute"
+      lower_limit: -3.14159
+      upper_limit: 3.14159
+      home_pos: 0.0
+    - name: "revolute_2"
+      type: "revolute"
+      lower_limit: 0.0
+      upper_limit: 3.14159
+      home_pos: 1.5708
+    - name: "revolute_3"
+      type: "revolute"
+      lower_limit: 0.0
+      upper_limit: 3.14159
+      home_pos: 1.5708
+    - name: "revolute_4"
+      type: "revolute"
+      lower_limit: 0.0
+      upper_limit: 3.14159
+      home_pos: 1.5708
+    - name: "revolute_5"
+      type: "revolute"
+      lower_limit: -3.14159
+      upper_limit: 3.14159
+      home_pos: 0.0
+  gripper:
+    joint_name: "gripper_joint"
+    open_value: 0.04
+    closed_value: 0.00
+  dropoff_position:
+    x: 0.15
+    y: 0.20
+    z: 0.05
+
+forearm_sensors:
+  camera:
+    type: "OV5647"
+    width: 640
+    height: 480
+    fps: 30
+    hfov_deg: 62.2
+    # Transform from forearm link to optical center
+    mounting_offset_xyz: [0.0, 0.03, 0.08]
+    mounting_rpy: [0.0, 0.35, 0.0]
+  tof:
+    type: "VL53L0X"
+    i2c_bus: 1
+    i2c_address: "0x29"
+    min_range_m: 0.03
+    max_range_m: 1.20
+    mounting_offset_xyz: [0.0, 0.03, 0.06]
+
+vision:
+  mediapipe:
+    max_num_hands: 1
+    min_detection_confidence: 0.7
+    min_tracking_confidence: 0.5
+  yolo:
+    model_name: "yolo11n.pt"
+    confidence_threshold: 0.45
+    target_classes: ["cup", "bottle", "box", "apple", "sports ball"]
+  table_plane:
+    z_height: 0.0 # flat table surface level in world frame
+
+simulation:
+  engine: "mujoco"
+  table_size: [1.2, 0.8, 0.02]
+  table_pos: [0.35, 0.0, 0.0]
+  render: true
+  physics_timestep: 0.002
