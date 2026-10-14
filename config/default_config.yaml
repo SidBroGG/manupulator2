@@ -30,17 +30,17 @@ robot:
       type: "revolute"
       lower_limit: 0.0
       upper_limit: 3.14159
-      home_pos: 0.35
+      home_pos: 0.60
     - name: "revolute_3"
       type: "revolute"
       lower_limit: 0.0
       upper_limit: 3.14159
-      home_pos: 0.35
+      home_pos: 0.60
     - name: "revolute_4"
       type: "revolute"
       lower_limit: 0.0
       upper_limit: 3.14159
-      home_pos: 0.50
+      home_pos: 0.60
     - name: "revolute_5"
       type: "revolute"
       lower_limit: -3.14159
@@ -55,23 +55,24 @@ robot:
     y: 0.20
     z: 0.05
 
-forearm_sensors:
+claw_sensors:
+  # Sensors mounted on claw (gripper) above servo, optical axis parallel to grasp approach (+Z)
   camera:
     type: "OV5647"
     width: 640
     height: 480
     fps: 30
     hfov_deg: 62.2
-    # Transform from forearm link to optical center
-    mounting_offset_xyz: [0.0, 0.03, 0.08]
-    mounting_rpy: [0.0, 0.35, 0.0]
+    # Transform from gripper base link to optical center
+    mounting_offset_xyz: [0.035, 0.012, 0.061]
+    mounting_rpy: [0.0, 3.14159, 0.0]
   tof:
     type: "VL53L0X"
     i2c_bus: 1
     i2c_address: "0x29"
     min_range_m: 0.03
     max_range_m: 1.20
-    mounting_offset_xyz: [0.0, 0.03, 0.06]
+    mounting_offset_xyz: [0.035, -0.014, 0.054]
 
 vision:
   mediapipe:

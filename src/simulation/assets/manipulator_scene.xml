@@ -108,9 +108,6 @@
           <joint name="revolute_3" range="0 3.14159" axis="0 1 0"/>
           <geom pos="-0.000223271 -0.0193178 -0.175483" quat="1 0 0 0" type="mesh" rgba="0.8 0.8 0.8 1" mesh="_2________1__1__Body1_collision"/>
 
-          <!-- SENSORS ON FOREARM: OV5647 Camera & VL53L0X ToF -->
-          <camera name="forearm_camera" pos="0.0 0.03 0.08" euler="0.0 0.35 0.0" fovy="48.8"/>
-          <site name="tof_sensor_site" pos="0.0 0.03 0.06" euler="0.0 0.35 0.0" size="0.005" rgba="1 0 0 1"/>
 
           <!-- Joint 4 body (Wrist pitch) -->
           <body name="соеденитель_захвата__1__1__body1" pos="0 0 0.114">
@@ -155,6 +152,27 @@
 
               <!-- End-Effector / Grasp center reference site -->
               <site name="gripper_tcp" pos="0.0 0.0 0.08" size="0.005" rgba="1 1 0 1"/>
+
+              <!-- SENSORS MOUNTED ON CLAW / GRIPPER ABOVE SERVO (PARALLEL TO GRASP AXIS) -->
+              <!-- Grey mount shelf extending over servo -->
+              <geom name="sensor_bracket_base" type="box" size="0.010 0.024 0.008" pos="0.025 0.0 0.038" rgba="0.32 0.32 0.35 1"/>
+              <geom name="sensor_bracket_shelf" type="box" size="0.014 0.026 0.003" pos="0.035 0.0 0.046" rgba="0.32 0.32 0.35 1"/>
+
+              <!-- Green OV5647 Camera PCB + Black Lens + Yellow ribbon port -->
+              <geom name="camera_pcb" type="box" size="0.012 0.012 0.001" pos="0.035 0.012 0.050" rgba="0.12 0.65 0.25 1"/>
+              <geom name="camera_lens_base" type="box" size="0.005 0.005 0.003" pos="0.035 0.012 0.054" rgba="0.15 0.15 0.15 1"/>
+              <geom name="camera_lens" type="cylinder" size="0.0035 0.003" pos="0.035 0.012 0.058" rgba="0.05 0.05 0.05 1"/>
+              <geom name="camera_connector" type="box" size="0.004 0.008 0.0015" pos="0.028 0.012 0.052" rgba="0.85 0.75 0.2 1"/>
+
+              <!-- Purple VL53L0X ToF PCB + Sensor Chip + Pin header -->
+              <geom name="tof_pcb" type="box" size="0.012 0.007 0.001" pos="0.035 -0.014 0.050" rgba="0.55 0.15 0.65 1"/>
+              <geom name="tof_sensor_chip" type="box" size="0.003 0.004 0.0015" pos="0.035 -0.014 0.052" rgba="0.1 0.1 0.1 1"/>
+              <geom name="tof_pin_header" type="box" size="0.003 0.006 0.003" pos="0.026 -0.014 0.048" rgba="0.8 0.7 0.2 1"/>
+
+              <!-- Virtual OV5647 Camera looking along +Z (gripper grasp approach direction) -->
+              <camera name="forearm_camera" pos="0.035 0.012 0.061" euler="0 3.14159265 0" fovy="48.8"/>
+              <!-- Virtual VL53L0X ToF Sensor Site looking along +Z (gripper grasp approach direction) -->
+              <site name="tof_sensor_site" pos="0.035 -0.014 0.054" euler="0 3.14159265 0" size="0.003" rgba="1 0 0 1"/>
 
               <!-- MOVING FINGERS FOR PHYSICAL CONTACT GRASPING -->
               <body name="left_finger" pos="0.0 0.015 0.07">

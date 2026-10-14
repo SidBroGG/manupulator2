@@ -112,19 +112,18 @@ def test_virtual_camera_rendering(sim: MujocoSim):
 
 def test_virtual_tof_sensor_measurements(sim: MujocoSim):
     """Test multi-ray ToF sensor range measurements towards table and objects (Item 1.3.2, 1.4.2)."""
-    # At home / forward observation pose, forearm looks towards table
-    sim.set_joint_positions([0.0, 0.0, 0.0, 0.0, 0.0])
+    # At approach / observation pose, claw and ToF point towards table
+    sim.set_joint_positions([0.0, 0.8, 0.8, 0.6, 0.0])
     sim.step(10)
 
     reading: ToFDistance = sim.get_tof_distance()
     assert isinstance(reading, ToFDistance)
     assert reading.valid
-    # Forearm is ~0.2m above the table
-    assert 0.10 <= reading.distance_m <= 0.50
+    # Claw is close to table surface
+    assert 0.03 <= reading.distance_m <= 0.50
 
-    # Test out of range behavior when pointing towards ceiling/sky
-    # Set shoulder to 1.5 rad with elbow bent upward
-    sim.set_joint_positions([0.0, 0.8, 0.8, 0.8, 0.0])
+    # Test out of range behavior when pointing vertically up towards ceiling/sky
+    sim.set_joint_positions([0.0, 0.0, 0.0, 0.0, 0.0])
     sim.step(10)
     reading_sky = sim.get_tof_distance()
     assert reading_sky.distance_m == sim.tof.max_range_m
