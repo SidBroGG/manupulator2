@@ -212,9 +212,13 @@ class MujocoSim:
         if target_obj and target_obj in self.weld_equality_ids:
             obj_pos = self.data.xpos[self.object_bodies[target_obj]]
             dist = float(np.linalg.norm(tcp_pos - obj_pos))
-            # If within 7cm of TCP, securely weld object to gripper
+            # If within 7cm of TCP, securely weld object between gripper fingers
             if dist < 0.07:
                 wid = self.weld_equality_ids[target_obj]
+                # Lock object relative pose directly between finger pads (local Z ~ 0.075)
+                self.model.eq_data[wid, :3] = 0.0
+                self.model.eq_data[wid, 3:6] = [0.0, 0.0, 0.075]
+                self.model.eq_data[wid, 6:10] = [1.0, 0.0, 0.0, 0.0]
                 self.data.eq_active[wid] = True
                 self._grasped_object = target_obj
                 return True

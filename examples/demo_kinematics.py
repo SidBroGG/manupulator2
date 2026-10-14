@@ -28,9 +28,9 @@ def run_kinematics_demo(headless: bool = False) -> None:
 
     # Get red box position on the table
     target_pos = sim.get_object_position("red_box")
-    # Grasp target slightly above bottom center of cube
-    grasp_pos = np.array([target_pos[0], target_pos[1], 0.025])
-    dropoff_pos = np.array([0.18, 0.20, 0.035])
+    # Grasp target at cube center height
+    grasp_pos = np.array([target_pos[0], target_pos[1], 0.020])
+    dropoff_pos = np.array([0.18, 0.20, 0.020])
 
     print(f"\n1. Целевой объект: 'red_box' на координатах: {np.round(grasp_pos, 3)}")
     print(f"2. Зона сброса (Drop-off): {np.round(dropoff_pos, 3)}")
@@ -51,6 +51,9 @@ def run_kinematics_demo(headless: bool = False) -> None:
 
     # 3. Execution in MuJoCo
     print("\n4. Запуск симуляции физического выполнения...")
+
+    grasped = False
+    released = False
 
     if not headless:
         print("   Открытие 3D-окна MuJoCo Viewer... (нажмите ESC или закройте окно для выхода)")
@@ -76,11 +79,13 @@ def run_kinematics_demo(headless: bool = False) -> None:
                     sim.set_joint_targets(pt.positions)
                     sim.set_gripper(pt.gripper)
 
-                    # Physical grasping interaction
-                    if "GRASP" in pt.segment_name and pt.gripper < 0.02:
+                    # Physical grasping interaction at exact dwell pauses
+                    if "dwell_GRASP" in pt.segment_name and not grasped:
                         sim.grasp_object("red_box")
-                    elif "PLACE" in pt.segment_name and pt.gripper > 0.02:
+                        grasped = True
+                    elif "dwell_PLACE" in pt.segment_name and not released:
                         sim.release_object()
+                        released = True
 
                     sim.step(steps_per_pt)
                     viewer.sync()
@@ -103,15 +108,19 @@ def run_kinematics_demo(headless: bool = False) -> None:
         for pt in trajectory:
             sim.set_joint_targets(pt.positions)
             sim.set_gripper(pt.gripper)
-            if "GRASP" in pt.segment_name and pt.gripper < 0.02:
+            if "dwell_GRASP" in pt.segment_name and not grasped:
                 sim.grasp_object("red_box")
-            elif "PLACE" in pt.segment_name and pt.gripper > 0.02:
+                grasped = True
+            elif "dwell_PLACE" in pt.segment_name and not released:
                 sim.release_object()
+                released = True
             sim.step(steps_per_pt)
         print("   Headless-симуляция успешно выполнена!")
 
     final_tcp = sim.data.site_xpos[sim.tcp_site_id]
+    final_box = sim.data.xpos[sim.object_bodies["red_box"]]
     print(f"\nИтоговые координаты TCP в симуляторе: {np.round(final_tcp, 3)}")
+    print(f"Итоговые координаты кубика на столе: {np.round(final_box, 3)}")
     print("=" * 70)
     sim.close()
 

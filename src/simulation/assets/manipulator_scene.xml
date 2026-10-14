@@ -230,9 +230,9 @@
     <joint joint1="gripper_left_joint" joint2="gripper_right_joint" polycoef="0 -1 0 0 0"/>
 
     <!-- Software-triggered weld constraints for 100% reliable transport after grasping -->
-    <weld name="weld_red_box" body1="gripper_x_t__1__1__body21" body2="red_box" active="false"/>
-    <weld name="weld_blue_cylinder" body1="gripper_x_t__1__1__body21" body2="blue_cylinder" active="false"/>
-    <weld name="weld_green_sphere" body1="gripper_x_t__1__1__body21" body2="green_sphere" active="false"/>
+    <weld name="weld_red_box" body1="gripper_x_t__1__1__body21" body2="red_box" relpose="0 0 0.075 1 0 0 0" active="false"/>
+    <weld name="weld_blue_cylinder" body1="gripper_x_t__1__1__body21" body2="blue_cylinder" relpose="0 0 0.075 1 0 0 0" active="false"/>
+    <weld name="weld_green_sphere" body1="gripper_x_t__1__1__body21" body2="green_sphere" relpose="0 0 0.075 1 0 0 0" active="false"/>
   </equality>
 
   <actuator>
