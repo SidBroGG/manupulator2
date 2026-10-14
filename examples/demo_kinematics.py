@@ -1,7 +1,12 @@
-"""Interactive visual demo of Stage 2 Kinematics and Pick-and-Place trajectory in MuJoCo."""
-
-from __future__ import annotations
+import os
+import sys
 import time
+
+# Ensure project root directory is in sys.path
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
 import numpy as np
 import mujoco
 import mujoco.viewer
